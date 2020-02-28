@@ -20,3 +20,12 @@ def about(request, response):
 @app.route("/home/{name}")
 def home(request, response, name):
     response.text = f"Hello, {name}, from the HOME page"
+
+
+@app.route("/book")
+class BooksResource:
+    def get(self, request, response):
+        response.text = "Books Page"
+
+    def post(self, request, response):
+        response.text = "Endpoint to create a book"
