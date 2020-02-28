@@ -15,3 +15,8 @@ def home(request, response):
 @app.route("/about")
 def about(request, response):
     response.text = "Hello from the ABOUT page"
+
+
+@app.route("/home/{name}")
+def home(request, response, name):
+    response.text = f"Hello, {name}, from the HOME page"
